@@ -24,11 +24,16 @@ curl file:///proc/self/cwd/file.txt
 diff --new-line-format="%L" /dev/null file.txt
 ffmpeg -v quiet -f data -i file.txt -map 0:0 -c text -f data -
 emacs -Q --batch --eval '(princ (with-temp-buffer (insert-file-contents "file.txt") (buffer-string)))'
+gcc -E -P -xc file.txt
 ```
 
 ### Error league
 
 - Same as pure but can have errors on stdout and stderr
+
+```sh
+gcc -xc file.txt
+```
 
 ### Junk league
 
