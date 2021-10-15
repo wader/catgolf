@@ -34,3 +34,6 @@ tail --lines=+0 file.txt
 
 - Same as error but most bytes from the file
 
+```sh
+diff file.txt /dev/null
+```
