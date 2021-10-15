@@ -18,6 +18,7 @@ sed '/*/p' file.txt
 sed -n p file.txt
 perl -e 'while(<>){print}' file.txt
 head -n -0 file.txt (GNU head)
+diff  --new-line-format="%L" /dev/null file.txt
 ```
 
 ### Error league
