@@ -13,6 +13,7 @@ jq -rRs . file.txt
 sed '/*/p' file.txt
 head -n -0 file.txt (GNU head)
 cp file.txt /dev/stdout
+scp file.txt /dev/stdout
 curl file://$PWD/file.txt
 dd status=none if=file.txt (GNU dd)
 awk '/.*/ { print }' file.txt
