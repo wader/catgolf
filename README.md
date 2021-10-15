@@ -8,6 +8,7 @@ Currentl rules are:
 ```sh
 cat file.txt
 grep '' file.txt
+cp file.txt /dev/stdout
 awk '/.*/ { print }' file.txt
 dd status=none if=file.txt (GNU dd)
 curl file://$PWD/file.txt
