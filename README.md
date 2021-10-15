@@ -17,7 +17,7 @@ ffmpeg -v quiet -f data -i file.txt -map 0:0 -c text -f data -
 sed '/*/p' file.txt
 sed -n p file.txt
 perl -e 'while(<>){print}' file.txt
-head -n -0 file.txt
+head -n -0 file.txt (GNU head)
 ```
 
 ### Error league
