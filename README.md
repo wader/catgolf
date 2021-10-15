@@ -1,8 +1,8 @@
 # cat(1) golf
 
-Currentl rules are:
-- No piping
-- No redirect
+### Pure league
+
+- No shell features involved
 - Only output on stdout
 
 ```sh
@@ -16,3 +16,12 @@ jq -rRs . file.txt
 ffmpeg -v quiet -f data -i file.txt -map 0:0 -c text -f data -
 sed '/*/p' file.txt
 ```
+
+### error league
+
+- Same as pure but can have errors on stdout and stderr
+
+### junk league
+
+- Same as error but most bytes from the file
+
