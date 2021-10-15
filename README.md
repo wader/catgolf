@@ -8,16 +8,17 @@
 ```sh
 cat file.txt
 grep '' file.txt
-cp file.txt /dev/stdout
-awk '/.*/ { print }' file.txt
-dd status=none if=file.txt (GNU dd)
-curl file://$PWD/file.txt
-jq -rRs . file.txt
-ffmpeg -v quiet -f data -i file.txt -map 0:0 -c text -f data -
-sed '/*/p' file.txt
 sed -n p file.txt
-perl -e 'while(<>){print}' file.txt
+jq -rRs . file.txt
+sed '/*/p' file.txt
 head -n -0 file.txt (GNU head)
+cp file.txt /dev/stdout
+curl file://$PWD/file.txt
+dd status=none if=file.txt (GNU dd)
+awk '/.*/ { print }' file.txt
+perl -e 'while(<>){print}' file.txt
+ffmpeg -v quiet -f data -i file.txt -map 0:0 -c text -f data -
+emacs -Q --batch --eval '(princ (with-temp-buffer (insert-file-contents "file.txt") (buffer-string)))'
 diff  --new-line-format="%L" /dev/null file.txt
 ```
 
