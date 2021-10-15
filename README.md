@@ -8,6 +8,7 @@
 ```sh
 cat file.txt
 grep '' file.txt
+sort -m file.txt
 sed -n p file.txt
 jq -rRs . file.txt
 sed '/*/p' file.txt
