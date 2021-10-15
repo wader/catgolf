@@ -17,11 +17,11 @@ ffmpeg -v quiet -f data -i file.txt -map 0:0 -c text -f data -
 sed '/*/p' file.txt
 ```
 
-### error league
+### Error league
 
 - Same as pure but can have errors on stdout and stderr
 
-### junk league
+### Junk league
 
 - Same as error but most bytes from the file
 
