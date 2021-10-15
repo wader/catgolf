@@ -15,6 +15,7 @@ curl file://$PWD/file.txt
 jq -rRs . file.txt
 ffmpeg -v quiet -f data -i file.txt -map 0:0 -c text -f data -
 sed '/*/p' file.txt
+sed -n p file.txt
 ```
 
 ### Error league
