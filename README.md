@@ -42,6 +42,7 @@ nc -l 0 1337 < file.txt | nc 0 1337
 - Same as pure but can have errors on stdout and stderr
 
 ```sh
+dd if=file.txt
 gcc -xc file.txt
 ```
 
