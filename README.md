@@ -46,6 +46,7 @@ emacs -Q --batch --eval '(princ (with-temp-buffer (insert-file-contents "file.tx
 tee < file.txt
 tr a a < file.txt
 rev file.txt | rev
+tac file.txt | tac
 echo ',p' | ed -s file.txt
 ```
 
