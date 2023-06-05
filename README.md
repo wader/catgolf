@@ -9,6 +9,7 @@
 cat file.txt
 awk 1 file.txt
 paste file.txt
+pv -q file.txt
 grep '' file.txt
 sort -m file.txt
 sed -n p file.txt
@@ -37,6 +38,7 @@ w3m -dump_source file.txt
 ### Pipe league
 
 ```
+tr a a < file.txt
 rev < file.txt | rev
 ```
 
