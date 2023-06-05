@@ -23,6 +23,7 @@ gcc -E -P -xc file.txt
 cp file.txt /dev/stdout
 scp file.txt /dev/stdout
 dd status=none if=file.txt (GNU dd)
+hexdump -ve '"%c"' file.txt
 openssl enc -none -in file.txt
 curl file:///proc/self/cwd/file.txt
 diff --line-format=%L /dev/null file.txt
