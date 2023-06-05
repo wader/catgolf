@@ -13,6 +13,7 @@ pv -q file.txt
 grep '' file.txt
 sort -m file.txt
 sed -n p file.txt
+less -XE file.txt
 cut -b 1- file.txt
 jq -rRs . file.txt
 perl -pe1 file.txt
