@@ -19,6 +19,7 @@ perl -pe1 file.txt
 sed '/*/p' file.txt
 tail -n +1 file.txt
 head -n -0 file.txt (GNU head)
+uniq -w 0 -D file.txt
 gcc -E -P -xc file.txt
 cp file.txt /dev/stdout
 scp file.txt /dev/stdout
