@@ -23,9 +23,9 @@ gcc -E -P -xc file.txt
 cp file.txt /dev/stdout
 scp file.txt /dev/stdout
 dd status=none if=file.txt (GNU dd)
-git -P grep -Eh ^ file.txt
 openssl enc -none -in file.txt
 curl file:///proc/self/cwd/file.txt
+git -P grep --no-index -h ^ file.txt
 diff --line-format=%L /dev/null file.txt
 vim -es --clean '+w! /dev/stdout' '+q!' file.txt
 ffmpeg -v quiet -f data -i file.txt -map 0:0 -c text -f data -
