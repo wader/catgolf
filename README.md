@@ -36,6 +36,7 @@ bat --color=never --style=plain file.txt
 - Same as pure but can have errors on stdout and stderr
 
 ```sh
+dd if=file.txt
 gcc -xc file.txt
 ```
 
