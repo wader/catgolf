@@ -39,6 +39,7 @@ emacs -Q --batch --eval '(princ (with-temp-buffer (insert-file-contents "file.tx
 ### Pipe league
 
 ```
+tee < file.txt
 tr a a < file.txt
 rev file.txt | rev
 echo ',p' | ed -s file.txt
