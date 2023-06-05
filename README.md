@@ -31,6 +31,12 @@ python -c 'print(open("file.txt").read()[:-1])'
 bat --color=never --style=plain file.txt
 ```
 
+### Pipe league
+
+```
+nc -l 0 1337 < file.txt | nc 0 1337
+```
+
 ### Error league
 
 - Same as pure but can have errors on stdout and stderr
