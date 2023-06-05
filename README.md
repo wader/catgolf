@@ -23,16 +23,16 @@ gcc -E -P -xc file.txt
 comm file.txt /dev/null (BSD comm)
 cp file.txt /dev/stdout
 scp file.txt /dev/stdout
+w3m -dump_source file.txt
 dd status=none if=file.txt (GNU dd)
 openssl enc -none -in file.txt
 curl file:///proc/self/cwd/file.txt
+bat --color=never --style=plain file.txt
 diff --line-format=%L /dev/null file.txt
+python -c 'print(open("file.txt").read()[:-1])'
 vim -es --clean '+w! /dev/stdout' '+q!' file.txt
 ffmpeg -v quiet -f data -i file.txt -map 0:0 -c text -f data -
 emacs -Q --batch --eval '(princ (with-temp-buffer (insert-file-contents "file.txt") (buffer-string)))'
-python -c 'print(open("file.txt").read()[:-1])'
-bat --color=never --style=plain file.txt
-w3m -dump_source file.txt
 ```
 
 ### Pipe league
