@@ -37,6 +37,7 @@ w3m -dump_source file.txt
 ### Pipe league
 
 ```
+tee < file.txt
 tr a a < file.txt
 rev < file.txt | rev
 ```
