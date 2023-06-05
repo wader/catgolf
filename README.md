@@ -39,6 +39,7 @@ w3m -dump_source file.txt
 ```
 tr a a < file.txt
 rev < file.txt | rev
+echo ',p' | ed -s file.txt
 ```
 
 ### Error league
