@@ -7,6 +7,7 @@
 
 ```sh
 cat file.txt
+awk 1 file.txt
 grep '' file.txt
 sort -m file.txt
 sed -n p file.txt
@@ -18,7 +19,6 @@ cp file.txt /dev/stdout
 scp file.txt /dev/stdout
 tail --lines=+0 file.txt
 dd status=none if=file.txt (GNU dd)
-awk '/.*/ { print }' file.txt
 openssl enc -none -in file.txt
 perl -e 'while(<>){print}' file.txt
 curl file:///proc/self/cwd/file.txt
