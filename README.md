@@ -12,6 +12,7 @@ paste file.txt
 grep '' file.txt
 sort -m file.txt
 sed -n p file.txt
+cut -b 1- file.txt
 jq -rRs . file.txt
 sed '/*/p' file.txt
 head -n -0 file.txt (GNU head)
