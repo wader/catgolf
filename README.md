@@ -27,6 +27,7 @@ w3m -dump_source file.txt
 dd status=none if=file.txt (GNU dd)
 openssl enc -none -in file.txt
 curl file:///proc/self/cwd/file.txt
+git -P grep --no-index -h ^ file.txt
 bat --color=never --style=plain file.txt
 diff --line-format=%L /dev/null file.txt
 python -c 'print(open("file.txt").read()[:-1])'
