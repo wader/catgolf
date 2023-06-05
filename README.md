@@ -35,7 +35,7 @@ w3m -dump_source file.txt
 ### Pipe league
 
 ```
-nc -l 0 1337 < file.txt | nc 0 1337
+rev < file.txt | rev
 ```
 
 ### Error league
