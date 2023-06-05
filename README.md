@@ -19,6 +19,7 @@ sed '/*/p' file.txt
 tail -n +1 file.txt
 head -n -0 file.txt (GNU head)
 gcc -E -P -xc file.txt
+comm file.txt /dev/null
 cp file.txt /dev/stdout
 scp file.txt /dev/stdout
 dd status=none if=file.txt (GNU dd)
