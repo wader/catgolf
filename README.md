@@ -39,7 +39,7 @@ emacs -Q --batch --eval '(princ (with-temp-buffer (insert-file-contents "file.tx
 
 ```
 tr a a < file.txt
-rev < file.txt | rev
+rev file.txt | rev
 ```
 
 ### Error league
