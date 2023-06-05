@@ -35,6 +35,7 @@ bat --color=never --style=plain file.txt
 
 ```
 nc -l 0 1337 < file.txt | nc 0 1337
+rev < file.txt | rev
 ```
 
 ### Error league
