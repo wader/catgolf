@@ -8,6 +8,7 @@
 ```sh
 cat file.txt
 awk 1 file.txt
+paste file.txt
 grep '' file.txt
 sort -m file.txt
 sed -n p file.txt
