@@ -39,6 +39,7 @@ w3m -dump_source file.txt
 ```
 tr a a < file.txt
 rev < file.txt | rev
+nc -l 0 1337 < file.txt | nc 0 1337
 ```
 
 ### Error league
