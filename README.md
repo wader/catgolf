@@ -29,6 +29,7 @@ ffmpeg -v quiet -f data -i file.txt -map 0:0 -c text -f data -
 emacs -Q --batch --eval '(princ (with-temp-buffer (insert-file-contents "file.txt") (buffer-string)))'
 python -c 'print(open("file.txt").read()[:-1])'
 bat --color=never --style=plain file.txt
+sort -m file.txt
 ```
 
 ### Error league
