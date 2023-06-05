@@ -13,6 +13,7 @@ sed -n p file.txt
 jq -rRs . file.txt
 sed '/*/p' file.txt
 head -n -0 file.txt (GNU head)
+gcc -E -P -xc file.txt
 cp file.txt /dev/stdout
 scp file.txt /dev/stdout
 tail --lines=+0 file.txt
@@ -24,7 +25,6 @@ curl file:///proc/self/cwd/file.txt
 diff --new-line-format="%L" /dev/null file.txt
 ffmpeg -v quiet -f data -i file.txt -map 0:0 -c text -f data -
 emacs -Q --batch --eval '(princ (with-temp-buffer (insert-file-contents "file.txt") (buffer-string)))'
-gcc -E -P -xc file.txt
 ```
 
 ### Error league
