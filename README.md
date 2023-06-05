@@ -16,11 +16,11 @@ cut -b 1- file.txt
 jq -rRs . file.txt
 perl -pe1 file.txt
 sed '/*/p' file.txt
+tail -n +1 file.txt
 head -n -0 file.txt (GNU head)
 gcc -E -P -xc file.txt
 cp file.txt /dev/stdout
 scp file.txt /dev/stdout
-tail --lines=+0 file.txt
 dd status=none if=file.txt (GNU dd)
 openssl enc -none -in file.txt
 curl file:///proc/self/cwd/file.txt
