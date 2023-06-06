@@ -29,6 +29,7 @@ hexdump -ve '"%c"' file.txt
 openssl enc -none -in file.txt
 curl file:///proc/self/cwd/file.txt
 git -P grep --no-index -h ^ file.txt
+shuf --random-source=/dev/zero file.txt
 bat --color=never --style=plain file.txt
 diff --line-format=%L /dev/null file.txt
 python -c 'print(open("file.txt").read()[:-1])'
