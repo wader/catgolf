@@ -20,25 +20,30 @@ sed '/*/p' file.txt
 tail -n +1 file.txt
 head -n -0 file.txt (GNU head)
 gcc -E -P -xc file.txt
+comm file.txt /dev/null (BSD comm)
 cp file.txt /dev/stdout
 scp file.txt /dev/stdout
+w3m -dump_source file.txt
 dd status=none if=file.txt (GNU dd)
+hexdump -ve '"%c"' file.txt
 openssl enc -none -in file.txt
 curl file:///proc/self/cwd/file.txt
+git -P grep --no-index -h ^ file.txt
+bat --color=never --style=plain file.txt
 diff --line-format=%L /dev/null file.txt
+python -c 'print(open("file.txt").read()[:-1])'
 vim -es --clean '+w! /dev/stdout' '+q!' file.txt
 ffmpeg -v quiet -f data -i file.txt -map 0:0 -c text -f data -
 emacs -Q --batch --eval '(princ (with-temp-buffer (insert-file-contents "file.txt") (buffer-string)))'
-python -c 'print(open("file.txt").read()[:-1])'
-bat --color=never --style=plain file.txt
-w3m -dump_source file.txt
 ```
 
 ### Pipe league
 
-```
+```sh
+tee < file.txt
 tr a a < file.txt
-rev < file.txt | rev
+rev file.txt | rev
+echo ',p' | ed -s file.txt
 nc -l 0 1337 < file.txt | nc 0 1337
 ```
 
