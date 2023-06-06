@@ -49,6 +49,7 @@ rev file.txt | rev
 tac file.txt | tac
 echo ',p' | ed -s file.txt
 xxd -p file.txt | xxd -p -r
+od -vAn -tx1 file.txt | xxd -r -p
 ```
 
 ### Error league
