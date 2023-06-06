@@ -48,9 +48,10 @@ rev file.txt | rev
 echo ',p' | ed -s file.txt
 ```
 
-### Sensitive league
+### Brittle league
 
-- Does not handle every character.
+- May not handle every character.
+- May not handle every file length.
 
 ```sh
 sed '/*/p' file.txt
