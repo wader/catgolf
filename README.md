@@ -27,6 +27,7 @@ scp file.txt /dev/stdout
 w3m -dump_source file.txt
 dd status=none if=file.txt # GNU dd
 hexdump -ve '"%c"' file.txt
+join -a 1 file.txt /dev/null
 openssl enc -none -in file.txt
 curl file:///proc/self/cwd/file.txt
 git -P grep --no-index -h ^ file.txt
