@@ -2,8 +2,8 @@
 
 ### Pure league
 
-- No shell features involved
-- Only output on stdout
+- No shell features are involved.
+- Only outputs to `stdout`.
 
 ```sh
 cat file.txt
@@ -39,6 +39,8 @@ emacs -Q --batch --eval '(princ (with-temp-buffer (insert-file-contents "file.tx
 
 ### Pipe league
 
+- Needs pipes to work.
+
 ```sh
 tee < file.txt
 tr a a < file.txt
@@ -46,15 +48,20 @@ rev file.txt | rev
 echo ',p' | ed -s file.txt
 ```
 
+### Sensitive league
+
+- Does not handle every character.
+
+```sh
+sed '/*/p' file.txt
+gcc -E -P -xc file.txt
+```
+
 ### Error league
 
-- Same as pure but can have errors on stdout and stderr
+- Same as "Pure league", but errors on `stdout` and/or `stderr` are acceptable.
 
 ```sh
 dd if=file.txt
 gcc -xc file.txt
 ```
-
-### Junk league
-
-- Same as error but most bytes from the file
