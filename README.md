@@ -12,6 +12,7 @@ paste file.txt
 pv -q file.txt
 grep '' file.txt
 sort -m file.txt
+look '' file.txt
 sed -n p file.txt
 cut -b 1- file.txt
 jq -rRs . file.txt
