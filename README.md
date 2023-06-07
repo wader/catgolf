@@ -67,5 +67,6 @@ gcc -xc file.txt
 ```sh
 fold file.txt # Works for files without long lines
 wall -n file.txt # I hope your file doesn't have any secrets
+uniq -Dw0 file.txt # Doesn't work for single-line files
 nl -bn -w 1 -s '' file.txt # Each line has an extra space
 ```
