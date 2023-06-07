@@ -10,6 +10,7 @@ cat file.txt
 awk 1 file.txt
 paste file.txt
 pv -q file.txt
+sed '' file.txt
 grep '' file.txt
 sort -m file.txt
 look '' file.txt
@@ -21,6 +22,7 @@ sed '/*/p' file.txt
 tail -n +1 file.txt
 head -n -0 file.txt # GNU head
 gcc -E -P -xc file.txt
+less +G +Q -X file.txt
 comm file.txt /dev/null # BSD comm
 cp file.txt /dev/stdout
 scp file.txt /dev/stdout
