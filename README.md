@@ -69,5 +69,6 @@ fold file.txt # Works for files without long lines
 wall -n file.txt # I hope your file doesn't have any secrets
 uniq -Dw0 file.txt # Doesn't work for single-line files
 xargs -d\n -a a.txt echo # Ends up with a trailing newline
+more -e -n 65535 file.txt # Works for files with less than 65k lines.
 nl -bn -w 1 -s '' file.txt # Each line has an extra space
 ```
