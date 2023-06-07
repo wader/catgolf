@@ -28,6 +28,7 @@ dd status=none if=file.txt # GNU dd
 hexdump -ve '"%c"' file.txt
 join -a 1 file.txt /dev/null
 openssl enc -none -in file.txt
+find file.txt -exec paste {} \;
 curl file:///proc/self/cwd/file.txt
 git -P grep --no-index -h ^ file.txt
 shuf --random-source=/dev/zero file.txt
