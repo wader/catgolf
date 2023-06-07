@@ -23,6 +23,7 @@ head -n -0 file.txt # GNU head
 gcc -E -P -xc file.txt
 comm file.txt /dev/null # BSD comm
 cp file.txt /dev/stdout
+column -t -l 1 file.txt
 scp file.txt /dev/stdout
 w3m -dump_source file.txt
 dd status=none if=file.txt # GNU dd
