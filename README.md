@@ -63,3 +63,7 @@ gcc -xc file.txt
 ### Junk league
 
 - Same as error but most bytes from the file
+
+```sh
+nl -bn -w 1 -s '' file.txt # Each line has an extra space
+```
