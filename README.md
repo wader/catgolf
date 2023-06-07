@@ -17,7 +17,6 @@ sed -n p file.txt
 cut -b 1- file.txt
 jq -rRs . file.txt
 perl -pe1 file.txt
-sed '/*/p' file.txt
 tail -n +1 file.txt
 head -n -0 file.txt # GNU head
 gcc -E -P -xc file.txt
