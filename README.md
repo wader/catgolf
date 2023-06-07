@@ -65,5 +65,6 @@ gcc -xc file.txt
 - Same as error but most bytes from the file
 
 ```sh
+wall -n file.txt # I hope your file doesn't have any secrets
 nl -bn -w 1 -s '' file.txt # Each line has an extra space
 ```
