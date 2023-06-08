@@ -12,23 +12,26 @@ paste file.txt
 pv -q file.txt
 grep '' file.txt
 sort -m file.txt
+look '' file.txt
 sed -n p file.txt
 cut -b 1- file.txt
 jq -rRs . file.txt
 perl -pe1 file.txt
-sed '/*/p' file.txt
 tail -n +1 file.txt
-head -n -0 file.txt (GNU head)
+head -n -0 file.txt # GNU head
 gcc -E -P -xc file.txt
-comm file.txt /dev/null (BSD comm)
+comm file.txt /dev/null # BSD comm
 cp file.txt /dev/stdout
 scp file.txt /dev/stdout
 w3m -dump_source file.txt
-dd status=none if=file.txt (GNU dd)
+dd status=none if=file.txt # GNU dd
 hexdump -ve '"%c"' file.txt
+split --filter=tee file.txt # GNU split
+join -a 1 file.txt /dev/null
 openssl enc -none -in file.txt
 curl file:///proc/self/cwd/file.txt
 git -P grep --no-index -h ^ file.txt
+shuf --random-source=/dev/zero file.txt
 bat --color=never --style=plain file.txt
 diff --line-format=%L /dev/null file.txt
 python -c 'print(open("file.txt").read()[:-1])'
@@ -43,7 +46,9 @@ emacs -Q --batch --eval '(princ (with-temp-buffer (insert-file-contents "file.tx
 tee < file.txt
 tr a a < file.txt
 rev file.txt | rev
+tac file.txt | tac
 echo ',p' | ed -s file.txt
+xxd -p file.txt | xxd -p -r
 nc -l 0 1337 < file.txt | nc 0 1337
 ```
 
