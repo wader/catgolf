@@ -66,3 +66,7 @@ gcc -E -P -xc file.txt
 dd if=file.txt
 gcc -xc file.txt
 ```
+
+### Junk league
+
+- Same as "Error league", but most of the output bytes are from the file.
