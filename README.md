@@ -1,9 +1,14 @@
+
 # cat(1) golf
+<img style="float: right" width="180" src="catgolf.svg">
+Get the file to stdout as intact as possible.
+<div style="clear: both">
 
 ### Pure league
 
 - No shell features involved
 - Only output on stdout
+
 
 ```sh
 cat file.txt
@@ -11,6 +16,8 @@ awk 1 file.txt
 paste file.txt
 pv -q file.txt
 pr -t file.txt
+grep ^ file.txt
+grep $ file.txt
 grep '' file.txt
 sort -m file.txt
 look '' file.txt
@@ -18,7 +25,6 @@ sed -n p file.txt
 cut -b 1- file.txt
 jq -rRs . file.txt
 perl -pe1 file.txt
-sed '/*/p' file.txt
 tail -n +1 file.txt
 head -n -0 file.txt # GNU head
 gcc -E -P -xc file.txt
@@ -28,6 +34,7 @@ scp file.txt /dev/stdout
 w3m -dump_source file.txt
 dd status=none if=file.txt # GNU dd
 hexdump -ve '"%c"' file.txt
+split --filter=tee file.txt # GNU split
 join -a 1 file.txt /dev/null
 openssl enc -none -in file.txt
 curl file:///proc/self/cwd/file.txt
@@ -47,7 +54,9 @@ emacs -Q --batch --eval '(princ (with-temp-buffer (insert-file-contents "file.tx
 tee < file.txt
 tr a a < file.txt
 rev file.txt | rev
+tac file.txt | tac
 echo ',p' | ed -s file.txt
+xxd -p file.txt | xxd -p -r
 ```
 
 ### Error league
