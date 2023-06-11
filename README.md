@@ -1,15 +1,23 @@
+
 # cat(1) golf
+<img style="float: right" width="180" src="catgolf.svg">
+Get the file to stdout as intact as possible.
+<div style="clear: both">
 
 ### Pure league
 
-- No shell features involved
-- Only output on stdout
+- No shell features are involved.
+- Only outputs to `stdout`.
+
 
 ```sh
 cat file.txt
 awk 1 file.txt
 paste file.txt
 pv -q file.txt
+pr -t file.txt
+grep ^ file.txt
+grep $ file.txt
 grep '' file.txt
 sort -m file.txt
 look '' file.txt
@@ -17,7 +25,6 @@ sed -n p file.txt
 cut -b 1- file.txt
 jq -rRs . file.txt
 perl -pe1 file.txt
-sed '/*/p' file.txt
 tail -n +1 file.txt
 head -n -0 file.txt # GNU head
 gcc -E -P -xc file.txt
@@ -27,6 +34,7 @@ scp file.txt /dev/stdout
 w3m -dump_source file.txt
 dd status=none if=file.txt # GNU dd
 hexdump -ve '"%c"' file.txt
+split --filter=tee file.txt # GNU split
 join -a 1 file.txt /dev/null
 openssl enc -none -in file.txt
 curl file:///proc/self/cwd/file.txt
@@ -42,6 +50,8 @@ emacs -Q --batch --eval '(princ (with-temp-buffer (insert-file-contents "file.tx
 
 ### Pipe league
 
+- Needs pipes to work.
+
 ```sh
 tee < file.txt
 tr a a < file.txt
@@ -51,9 +61,19 @@ echo ',p' | ed -s file.txt
 xxd -p file.txt | xxd -p -r
 ```
 
+### Brittle league
+
+- May not handle every character.
+- May not handle every file length.
+
+```sh
+sed '/*/p' file.txt
+gcc -E -P -xc file.txt
+```
+
 ### Error league
 
-- Same as pure but can have errors on stdout and stderr
+- Same as "Pure league", but errors on `stdout` and/or `stderr` are acceptable.
 
 ```sh
 dd if=file.txt
@@ -62,7 +82,7 @@ gcc -xc file.txt
 
 ### Junk league
 
-- Same as error but most bytes from the file
+- Same as "Error league", but most of the output bytes are from the file.
 
 ```sh
 fold file.txt # Works for files without long lines
