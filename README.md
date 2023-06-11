@@ -6,8 +6,8 @@ Get the file to stdout as intact as possible.
 
 ### Pure league
 
-- No shell features involved
-- Only output on stdout
+- No shell features are involved.
+- Only outputs to `stdout`.
 
 
 ```sh
@@ -50,6 +50,8 @@ emacs -Q --batch --eval '(princ (with-temp-buffer (insert-file-contents "file.tx
 
 ### Pipe league
 
+- Needs pipes to work.
+
 ```sh
 tee < file.txt
 tr a a < file.txt
@@ -59,9 +61,19 @@ echo ',p' | ed -s file.txt
 xxd -p file.txt | xxd -p -r
 ```
 
+### Brittle league
+
+- May not handle every character.
+- May not handle every file length.
+
+```sh
+sed '/*/p' file.txt
+gcc -E -P -xc file.txt
+```
+
 ### Error league
 
-- Same as pure but can have errors on stdout and stderr
+- Same as "Pure league", but errors on `stdout` and/or `stderr` are acceptable.
 
 ```sh
 dd if=file.txt
@@ -70,4 +82,4 @@ gcc -xc file.txt
 
 ### Junk league
 
-- Same as error but most bytes from the file
+- Same as "Error league", but most of the output bytes are from the file.
