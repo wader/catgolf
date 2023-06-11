@@ -1,9 +1,14 @@
+
 # cat(1) golf
+<img style="float: right" width="180" src="catgolf.svg">
+Get the file to stdout as intact as possible.
+<div style="clear: both">
 
 ### Pure league
 
 - No shell features involved
 - Only output on stdout
+
 
 ```sh
 cat file.txt
