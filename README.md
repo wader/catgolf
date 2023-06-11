@@ -15,6 +15,7 @@ cat file.txt
 awk 1 file.txt
 paste file.txt
 pv -q file.txt
+pr -t file.txt
 grep ^ file.txt
 grep $ file.txt
 grep '' file.txt
