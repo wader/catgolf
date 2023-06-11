@@ -49,7 +49,7 @@ rev file.txt | rev
 tac file.txt | tac
 echo ',p' | ed -s file.txt
 xxd -p file.txt | xxd -p -r
-nc -l ::0 1337 < file.txt | nc ::0 1337
+nc -l ::0 1337 -w 1 < file.txt | nc ::0 1337 -w 1
 ```
 
 ### Error league
