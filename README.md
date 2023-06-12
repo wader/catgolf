@@ -86,6 +86,7 @@ gcc -xc file.txt
 - Same as "Error league", but most of the output bytes are from the file.
 
 ```sh
+m4 file.txt # Does not handle lines that starts with `#` or looks like definitions.
 fold file.txt # Works for files without long lines
 wall -n file.txt # I hope your file doesn't have any secrets
 uniq -Dw0 file.txt # Doesn't work for single-line files
