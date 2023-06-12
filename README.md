@@ -30,6 +30,7 @@ head -n -0 file.txt # GNU head
 cp file.txt /dev/fd/1
 gcc -E -P -xc file.txt
 scp file.txt /dev/fd/1
+column -t -l 1 file.txt
 comm file.txt /dev/null # BSD comm
 w3m -dump_source file.txt
 dd status=none if=file.txt # GNU dd
