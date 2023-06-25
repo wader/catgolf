@@ -49,9 +49,9 @@ ffmpeg -v quiet -f data -i file.txt -map 0:0 -c text -f data -
 emacs -Q --batch --eval '(princ (with-temp-buffer (insert-file-contents "file.txt") (buffer-string)))'
 ```
 
-### Pipe league
+### Shell league league
 
-- Needs pipes to work.
+- Can use shell feature like pipes, redirect etc to work.
 
 ```sh
 tee < file.txt
