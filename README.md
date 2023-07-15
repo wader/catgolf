@@ -34,6 +34,7 @@ column -t -l 1 file.txt
 comm file.txt /dev/null # BSD comm
 w3m -dump_source file.txt
 dd status=none if=file.txt # GNU dd
+libreoffice --cat file.txt
 hexdump -ve '"%c"' file.txt
 split --filter=tee file.txt # GNU split
 join -a 1 file.txt /dev/null
