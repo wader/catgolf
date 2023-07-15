@@ -38,6 +38,7 @@ hexdump -ve '"%c"' file.txt
 split --filter=tee file.txt # GNU split
 join -a 1 file.txt /dev/null
 openssl enc -none -in file.txt
+find file.txt -exec paste {} \;
 curl file:///proc/self/cwd/file.txt
 git -P grep --no-index -h ^ file.txt
 shuf --random-source=/dev/zero file.txt
