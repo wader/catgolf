@@ -16,14 +16,17 @@ awk 1 file.txt
 paste file.txt
 pv -q file.txt
 pr -t file.txt
+sed b file.txt
 grep ^ file.txt
 grep $ file.txt
+sed '' file.txt
 grep '' file.txt
 sort -m file.txt
 look '' file.txt
+jq -rR . file.txt
 sed -n p file.txt
 cut -b 1- file.txt
-jq -rRs . file.txt
+jq -jRs . file.txt
 perl -pe1 file.txt
 tail -n +1 file.txt
 head -n -0 file.txt # GNU head
