@@ -61,6 +61,7 @@ tee < file.txt
 tr a a < file.txt
 rev file.txt | rev
 tac file.txt | tac
+xz < file.txt | xzcat
 echo ',p' | ed -s file.txt
 xxd -p file.txt | xxd -p -r
 while read l; do echo $l; done < file.txt
