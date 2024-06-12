@@ -63,6 +63,7 @@ rev file.txt | rev
 tac file.txt | tac
 echo ',p' | ed -s file.txt
 xxd -p file.txt | xxd -p -r
+while read l; do echo $l; done < file.txt
 ```
 
 ### Brittle league
