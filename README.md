@@ -63,7 +63,6 @@ rev file.txt | rev
 tac file.txt | tac
 echo ',p' | ed -s file.txt
 xxd -p file.txt | xxd -p -r
-while read l; do echo $l; done < file.txt
 ```
 
 ### Brittle league
@@ -97,4 +96,5 @@ uniq -Dw0 file.txt # Doesn't work for single-line files
 xargs -d\n -a a.txt echo # Ends up with a trailing newline
 more -e -n 65535 file.txt # Works for files with less than 65k lines.
 nl -bn -w 1 -s '' file.txt # Each line has an extra space
+while read l; do echo $l; done < file.txt # See emanuele6's comment: https://github.com/wader/catgolf/pull/63#issuecomment-2164030897
 ```
