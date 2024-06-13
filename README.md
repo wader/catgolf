@@ -58,6 +58,7 @@ emacs -Q --batch --eval '(princ (with-temp-buffer (insert-file-contents "file.tx
 
 ```sh
 tee < file.txt
+< file.txt >&1 # assuming zsh and default NULLCMD
 tr a a < file.txt
 rev file.txt | rev
 tac file.txt | tac
